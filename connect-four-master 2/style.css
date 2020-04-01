@@ -4,19 +4,20 @@
     flex-wrap: wrap;
     height: 120px;
     width: 140px;
-}
-
-.grid div {
+  }
+  
+  .grid div {
     height: 20px;
-    width: 20px
-}
+    width: 20px;
+  }
 
-.player-one {
+  .player-one {
     background-color: red;
     border-radius: 10px;
-}
+  }
 
-.player-two {
+  .player-two {
     background-color: blue;
     border-radius: 10px;
-}
+  }
+
