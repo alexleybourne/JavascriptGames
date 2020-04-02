@@ -1,14 +1,16 @@
 
 const transformText = () => {
     console.log('Running')
-    let input = document.getElementById('textInput').value;
-    document.getElementById('textInput').value = '';
-    console.log(input);
+    document.getElementById('button').classList.add('rotate-center');
+    let textInput = document.getElementById('textInput')
+    let inputValue = textInput.value;
     // input = input.replace(/[`~!@#$%^&*()_|+\=?;:'",.<>\{\}\[\]\\\/]/gi, '');
-    input = input.replace(/\s+/g, '-').toLowerCase();
-    document.getElementById('textOutput').innerText = input;
-    let str = input
+    inputValue = inputValue.replace(/\s+/g, '-').toLowerCase();
+    textInput.value = ''
+    textInput.value = inputValue;
+    let str = inputValue
     copyToClipboard(str)
+    setTimeout( function() { document.getElementById('button').classList.remove('rotate-center') } , 700);
 }
 
 const copyToClipboard = (str) => {
