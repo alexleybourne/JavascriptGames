@@ -8,6 +8,7 @@ const input = () => {
     } else {
         button.classList.remove('green')
         button.classList.add('black')
+        resetButton()
     }
 }
 
