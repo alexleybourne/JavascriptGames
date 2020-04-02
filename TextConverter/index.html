@@ -22,15 +22,33 @@
                     <button onclick="transformText()" id="button" class="black visible"><ion-icon name="sync-outline"  class="icon"></ion-icon></button>
                     <button onclick="clearText()" id="deleteButton" class="red hidden"><ion-icon name="close-circle-outline"  class="icon"></ion-icon></button>
                 </div>
+                <div class="checkboxes">
+                    <label class="Lcontainer">
+                            <p>Remove Spaces</p>
+                            <input type="checkbox" checked="checked" id="r-spaces">
+                            <span class="checkmark"></span>
+                      </label>
+                      <label class="Lcontainer">
+                            <p>Lowercase</p>  
+                            <input type="checkbox" checked="checked" id="lowercase">
+                            <span class="checkmark"></span>
+                      </label>
+                      <label class="Lcontainer">
+                          <p>Remove Numbers</p>
+                            <input type="checkbox" id="r-numbers">
+                            <span class="checkmark"></span>
+                      </label>
+                      <label class="Lcontainer">
+                          <p>Remove Special Characters</p>
+                            <input type="checkbox" id="r-special">
+                            <span class="checkmark"></span>
+                      </label>
+                </div>
             </div>
        </div>
    </div>
-   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="/__/firebase/7.13.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
 <!-- Initialize Firebase -->
 <script src="/__/firebase/init.js"></script>
 </body>
