@@ -11,12 +11,14 @@
 <body>
    <div class="container">
        <div class="card">
-           <h1>Text Converter</h1>
-           <div class="input">
-            <input type="text" name="textInput" id="textInput" size=100 oninput="input()">
-            <button onclick="transformText()" id="button" class="black"><ion-icon name="sync-outline"  class="icon"></ion-icon></button>
-            <button onclick="clear()" id="button" class="black"><ion-icon name="sync-outline"  class="icon"></ion-icon></button>
-           </div>
+           <div class="content">
+                <h1>Text Converter</h1>
+                <div class="input">
+                    <input type="text" name="textInput" id="textInput" size=100 oninput="input()">
+                    <button onclick="transformText()" id="button" class="black visible"><ion-icon name="sync-outline"  class="icon"></ion-icon></button>
+                    <button onclick="clearText()" id="deleteButton" class="red hidden"><ion-icon name="close-circle-outline"  class="icon"></ion-icon></button>
+                </div>
+            </div>
        </div>
    </div>
 </body>

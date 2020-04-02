@@ -10,6 +10,14 @@ body {
     width: 100vw;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-20px);
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -84,6 +92,22 @@ body {
 
 .green {
     background-color: rgb(87, 227, 87);
+}
+
+.red {
+    background-color: rgb(225, 65, 65);
+}
+
+.visible {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+    position: absolute;
+    right: 8.5vw;
+    touch-action: none;
+    z-index: -1;
 }
 
 .rotate-center {

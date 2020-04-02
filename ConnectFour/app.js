@@ -1,3 +1,4 @@
+
 const input = () => {
     let textInput = document.getElementById('textInput')
     let button = document.getElementById('button');
@@ -12,23 +13,47 @@ const input = () => {
 
 
 const transformText = () => {
-
     let button = document.getElementById('button');
+    let deleteButton = document.getElementById('deleteButton');
     if (button.classList.contains('green')){
         button.classList.add('rotate-center')
         let textInput = document.getElementById('textInput')
         let inputValue = textInput.value;
         // input = input.replace(/[`~!@#$%^&*()_|+\=?;:'",.<>\{\}\[\]\\\/]/gi, '');
         inputValue = inputValue.replace(/\s+/g, '-').toLowerCase();
-        textInput.value = ''
         textInput.value = inputValue;
-        let str = inputValue
-        copyToClipboard(str)
-        setTimeout( function() { button.classList.remove('rotate-center') } , 700);
-        button.classList.remove('green')
-        button.classList.add('black')
+        let str = inputValue;
+        copyToClipboard(str);
+        removeClasses();
     }
 }
+
+const clearText = () => {
+    document.getElementById('textInput').value = '';
+    resetButton();
+}
+
+const removeClasses = () => {
+    setTimeout( function() { 
+        button.classList.remove('green', 'visible', 'rotate-center')
+        button.classList.add('black', 'hidden')
+        deleteButton.classList.remove('hidden')
+        deleteButton.classList.add('visible')
+    }  , 700);
+}
+
+const resetButton = () => {
+    button.classList.add('rotate-center')
+    button.classList.remove('hidden')
+        button.classList.add('visible')
+        deleteButton.classList.remove('visible')
+        deleteButton.classList.add('hidden')
+    setTimeout( function() { 
+        button.classList.remove('rotate-center')
+    }  , 700);
+}
+
+
 
 const copyToClipboard = (str) => {
     const el = document.createElement('textarea');
