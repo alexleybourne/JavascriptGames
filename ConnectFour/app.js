@@ -2,11 +2,11 @@ const input = () => {
     let textInput = document.getElementById('textInput')
     let button = document.getElementById('button');
     if (textInput.value.length > 0 && textInput.value !== ' ') {
-        button.classList.remove('blue')
+        button.classList.remove('black')
         button.classList.add('green')
     } else {
         button.classList.remove('green')
-        button.classList.add('blue')
+        button.classList.add('black')
     }
 }
 
@@ -26,7 +26,7 @@ const transformText = () => {
         copyToClipboard(str)
         setTimeout( function() { button.classList.remove('rotate-center') } , 700);
         button.classList.remove('green')
-        button.classList.add('blue')
+        button.classList.add('black')
     }
 }
 
