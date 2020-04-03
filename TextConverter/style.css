@@ -2,6 +2,7 @@ body {
     background-color: #212121;
 }
 
+/* Main Container */
 .container {
     display: flex;
     justify-content: center;
@@ -31,6 +32,7 @@ body {
                 -27px -27px 54px #272727;
 }
 
+/* Input Box with wrapper */
 .input {
     display: flex;
     justify-content: space-between;
@@ -40,10 +42,27 @@ body {
     border-radius: 50px;
 }
 
+ion-icon {
+    filter: invert(1);
+}
+
 .card h1 {
     font-size: 60px;
     color: white;
     font-family: arial;
+    margin-bottom: 0;
+}
+
+.subText {
+    color: white;
+    font-family: arial;
+    margin-top: 0;
+}
+
+.subText ion-icon {
+    font-size: 20px;
+    position: relative;
+    top: 3px;
 }
 
 .card input {
@@ -68,6 +87,8 @@ body {
     outline: none;
 }
 
+/* Button Hover Over */
+
 .card button:hover {
     transform: scale(1.05);
 }
@@ -83,8 +104,9 @@ body {
     position: relative;
     left: -5px;
     top: 1px;
-    filter: invert(1);
 }
+
+/* Button Classes */
 
 .black {
     background-color: #353535;
@@ -110,6 +132,7 @@ body {
     z-index: -1;
 }
 
+/* Rotate Animation for button */
 .rotate-center {
 	-webkit-animation: rotate-center 0.6s ease-in-out both;
 	        animation: rotate-center 0.6s ease-in-out both;
@@ -193,7 +216,7 @@ body {
   
   /* When the checkbox is checked, add a blue background */
   .Lcontainer input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: rgb(87, 227, 87);
   }
   
   /* Create the checkmark/indicator (hidden when not checked) */
