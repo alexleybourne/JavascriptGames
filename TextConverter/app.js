@@ -55,8 +55,10 @@ const transformText = () => {
         button.classList.add('rotate-center')
         let textInput = document.getElementById('textInput')
         let inputValue = textInput.value;
-        // input = input.replace(/[`~!@#$%^&*()_|+\=?;:'",.<>\{\}\[\]\\\/]/gi, '');
-        inputValue = inputValue.replace(/\s+/g, '-').toLowerCase();
+        if (removeSpacing) { inputValue = inputValue.replace(/\s+/g, '-') }
+        if (makeLowercase) { inputValue = inputValue.toLowerCase() }
+        if (removeNumbers) { inputValue = inputValue.replace(/[0-9]/g, '') }
+        if (removeSCharacters) { inputValue = inputValue.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '') }
         textInput.value = inputValue;
         let str = inputValue;
         copyToClipboard(str);
