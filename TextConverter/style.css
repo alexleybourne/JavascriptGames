@@ -162,7 +162,7 @@ body {
 }
 
 .red {
-    background-color: rgb(225, 65, 65);
+    background-color: #353535;
 }
 
 .visible {
@@ -217,7 +217,7 @@ body {
 }
 
 .checkboxFull {
-    width: 700px
+    width: 88%
 }
 
 .checkboxSmall {

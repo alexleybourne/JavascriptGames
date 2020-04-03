@@ -11,7 +11,7 @@ document.addEventListener('keyup', function(event) {
 const input = () => {
     let textInput = document.getElementById('textInput')
     let button = document.getElementById('button');
-    if (textInput.value.length > 1 && textInput.value !== ' ') {
+    if (textInput.value.length > 0 && textInput.value !== ' ') {
         button.classList.remove('black')
         button.classList.add('green')
     } else {
