@@ -1,3 +1,29 @@
+let removeSpacing = true
+let makeLowercase = true
+let removeNumbers = false
+let removeSCharacters = false
+
+
+const removeSpaces = () => {
+    removeSpacing = (removeSpacing? false : true) 
+    console.log(removeSpacing)
+}
+
+const lowercase = () => {
+    makeLowercase = (makeLowercase? false : true) 
+    console.log(makeLowercase)
+}
+
+const removeNums = () => {
+    removeNumbers = (removeNumbers? false : true)
+    console.log(removeNumbers)
+}
+
+const removeSChars = () => {
+    removeSCharacters = (removeSCharacters? false : true) 
+    console.log(removeSCharacters)
+}
+
 
 document.addEventListener('keyup', function(event) {
   // Number 13 is the "Enter" key on the keyboard
