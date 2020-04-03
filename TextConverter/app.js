@@ -11,7 +11,7 @@ document.addEventListener('keyup', function(event) {
 const input = () => {
     let textInput = document.getElementById('textInput')
     let button = document.getElementById('button');
-    if (textInput.value.length > 0 && textInput.value !== ' ') {
+    if (textInput.value.length > 1 && textInput.value !== ' ') {
         button.classList.remove('black')
         button.classList.add('green')
     } else {
@@ -63,8 +63,6 @@ const resetButton = () => {
     }  , 700);
 }
 
-
-
 const copyToClipboard = (str) => {
     const el = document.createElement('textarea');
     el.value = str;
@@ -76,3 +74,28 @@ const copyToClipboard = (str) => {
     document.execCommand('copy');
     document.body.removeChild(el);
 };
+
+let settingsOpen = false
+
+const settings = () => {
+
+    const box = document.getElementById('settingsBox');
+
+    if (settingsOpen) {
+        settingsOpen = false
+        box.classList.remove('checkboxOpen')
+        box.classList.add('checkboxClosed')
+        setTimeout( function() { 
+            box.classList.remove('checkboxFull')
+            box.classList.add('checkboxSmall')
+        }  , 300);
+    } else {
+        settingsOpen = true
+        box.classList.remove('checkboxSmall')
+        box.classList.add('checkboxFull')
+        setTimeout( function() { 
+            box.classList.remove('checkboxClosed')
+            box.classList.add('checkboxOpen')
+        }  , 300);
+    }
+}

@@ -23,8 +23,8 @@
                     <button onclick="transformText()" id="button" class="black visible"><ion-icon name="sync-outline"  class="icon"></ion-icon></button>
                     <button onclick="clearText()" id="deleteButton" class="red hidden"><ion-icon name="close-circle-outline"  class="icon"></ion-icon></button>
                 </div>
-                <button type="button" class="collapsible settingsButton"><p>Settings</p><ion-icon name="cog-outline"></ion-icon></button>
-                <div class="checkboxes">
+                <button onclick="settings()" type="button" class="collapsible settingsButton"><p>Settings</p><ion-icon name="cog-outline"></ion-icon></button>
+                <div class="checkboxes checkboxClosed checkboxSmall" id="settingsBox">
                     <div class="checkboxesContent">
                         <label class="Lcontainer">
                                 <p>Remove Spaces</p>

@@ -201,6 +201,24 @@ body {
 
 /* Checkbox Css */
 
+.checkboxOpen {
+    height: 80px;
+}
+
+.checkboxClosed {
+    height: 0px;
+    touch-action: none;
+}
+
+.checkboxFull {
+    width: 700px
+}
+
+.checkboxSmall {
+    width: 0px
+}
+
+
 .checkboxes {
     display: flex;
     position: relative;
@@ -208,13 +226,18 @@ body {
     z-index: -1;
     border: solid 2px white;
     border-radius: 10px;
+    overflow: hidden;
+    transition-duration: 0.4s;
 }
 
 .checkboxesContent {
     display: flex;
+    justify-content: center;
     position: relative;
+    align-items: center;
     top: -4px;
     margin: 10px 20px;
+    width: 90%;
 }
 
 /* The container */
