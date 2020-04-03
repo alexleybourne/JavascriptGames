@@ -202,7 +202,19 @@ body {
 /* Checkbox Css */
 
 .checkboxes {
- display: flex;
+    display: flex;
+    position: relative;
+    top: -14px;
+    z-index: -1;
+    border: solid 2px white;
+    border-radius: 10px;
+}
+
+.checkboxesContent {
+    display: flex;
+    position: relative;
+    top: -4px;
+    margin: 10px 20px;
 }
 
 /* The container */
