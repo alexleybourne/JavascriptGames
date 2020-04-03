@@ -80,22 +80,31 @@ let settingsOpen = false
 const settings = () => {
 
     const box = document.getElementById('settingsBox');
+    const icon = document.getElementById('settingsIcon');
 
     if (settingsOpen) {
         settingsOpen = false
+        icon.classList.add('rotateBackwards')
         box.classList.remove('checkboxOpen')
         box.classList.add('checkboxClosed')
         setTimeout( function() { 
             box.classList.remove('checkboxFull')
             box.classList.add('checkboxSmall')
         }  , 300);
+        setTimeout( function() { 
+            icon.classList.remove('rotateBackwards')
+        }  , 800);
     } else {
         settingsOpen = true
+        icon.classList.add('rotateForwards')
         box.classList.remove('checkboxSmall')
         box.classList.add('checkboxFull')
         setTimeout( function() { 
             box.classList.remove('checkboxClosed')
             box.classList.add('checkboxOpen')
         }  , 300);
+        setTimeout( function() { 
+            icon.classList.remove('rotateForwards')
+        }  , 800);
     }
 }
