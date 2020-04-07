@@ -25,7 +25,8 @@ body {
     align-items: center;
     justify-content: center;
     width: 90vw;
-    height: 500px;
+    min-height: 500px;
+    height: 60vh;
     border-radius: 36px;
     background: #212121;
     box-shadow:  27px 27px 54px #1b1b1b, 
