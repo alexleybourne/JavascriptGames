@@ -180,7 +180,7 @@ body {
 /* Checkbox Css */
 
 .checkboxOpen {
-    height: 80px;
+    height: 80%;
 }
 
 .checkboxClosed {
@@ -210,6 +210,7 @@ body {
 
 .checkboxesContent {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     position: relative;
     align-items: center;
