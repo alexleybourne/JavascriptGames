@@ -6,13 +6,22 @@ const Start = () => {
 
 
 const CreateSquares = () => {
-    let i = 1
-    while (i < 53) {
+    let x = 1
+    let y = 1
+
+    innerCode = `<div class="square"></div>`
+    divCode = ''
+    while ( y < 8 ) {
+        divCode = divCode + innerCode
+        y ++
+    }
+
+    while (x < 53) {
         let area = document.getElementById('squareArea')
         let div = document.createElement('div')
-        div.innerHTML = `<div class="square"></div>`
-        div.setAttribute('class', `week${i}`)
+        div.innerHTML = divCode
+        div.setAttribute('class', `week${x}`)
         area.appendChild(div)
-        i ++ 
+        x ++ 
     }
 }
