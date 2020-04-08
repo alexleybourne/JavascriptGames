@@ -1,33 +1,33 @@
 let removeSpacing = true
 let removeQuotationMarks = true
 let makeLowercase = true
+let makeUppercase = false
 let removeNumbers = false
 let removeSCharacters = false
 
 
 const removeSpaces = () => {
     removeSpacing = (removeSpacing? false : true) 
-    console.log(removeSpacing)
 }
 
 const removeQuotations = () => {
     removeQuotationMarks = (removeQuotationMarks? false : true) 
-    console.log(removeQuotationMarks)
 }
 
 const lowercase = () => {
     makeLowercase = (makeLowercase? false : true) 
-    console.log(makeLowercase)
+}
+
+const uppercase = () => {
+    makeUppercase = (makeUppercase? false : true) 
 }
 
 const removeNums = () => {
     removeNumbers = (removeNumbers? false : true)
-    console.log(removeNumbers)
 }
 
 const removeSChars = () => {
     removeSCharacters = (removeSCharacters? false : true) 
-    console.log(removeSCharacters)
 }
 
 
@@ -64,6 +64,7 @@ const transformText = () => {
         if (removeSpacing) { inputValue = inputValue.replace(/\s+/g, '-') }
         if (removeQuotationMarks) { inputValue = inputValue.replace(/['"]/g, '') }
         if (makeLowercase) { inputValue = inputValue.toLowerCase() }
+        if (makeUppercase) { inputValue = inputValue.toUpperCase() }
         if (removeNumbers) { inputValue = inputValue.replace(/[0-9]/g, '') }
         if (removeSCharacters) { inputValue = inputValue.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '') }
         textInput.value = inputValue;
