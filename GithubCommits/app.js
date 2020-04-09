@@ -6,6 +6,8 @@ const Start = () => {
 
 const sleep = (time) => new Promise(r => setTimeout(r, time))
 
+let totalCommits = 0
+
 const RandomColour = async () => {
     let i = 1
     while ( i < 366 ) {
@@ -23,10 +25,12 @@ const RandomColour = async () => {
             day.classList.replace("darker-green", "darkest-green")
         }
 
-        document.getElementById("commit-number").textContent = i
+        document.getElementById("commit-number").textContent = totalCommits
+        document.title = `${totalCommits} Github Commits`
 
         await sleep(1)
 
+        totalCommits ++
         i ++ 
     }
 }
