@@ -6,18 +6,21 @@ const Start = () => {
 
 const RandomColour = () => {
     let i = 1
-    while ( i < 100 ) {
-        x = (Math.round(Math.random() * 52))
-        y = (Math.round(Math.random() * 7))
+    while ( i < 50 ) {
+        let x = (Math.round(Math.random() * 52))
+        let y = (Math.round(Math.random() * 7))
         let day = document.querySelector(`#week${x} #day${y}`)
-        if (day.classList.contains('blank')) {
-            day.removeAttribute('class', `blank`)
-            day.setAttribute('class', `green square`)
-        } else if (day.classList.contains('green')) {
-            day.setAttribute('class', `dark-green square`)
+        
+        if (day.classList.contains("blank")) {
+            day.classList.replace("blank", "green")
+        } else if (day.classList.contains("green")) {
+            day.classList.replace("green", "dark-green")
+        } else if (day.classList.contains("dark-green")) {
+            day.classList.replace("dark-green", "darker-green")
+        } else if (day.classList.contains("darker-green")) {
+            day.classList.replace("darker-green", "darkest-green")
         }
-        
-        
+
         console.log(i)
         i ++
     }
