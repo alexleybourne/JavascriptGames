@@ -5,6 +5,7 @@ body {
 /* Main Container */
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -28,10 +29,13 @@ body {
 .square {
     height: 12px;
     width: 12px;
-    background-color: #ebedf0;
     margin: 2px;
 }
 
 .blank {
-    background-color: white;
+    background-color: #ebedf0;
+}
+
+.green {
+    background-color: greenyellow;
 }
