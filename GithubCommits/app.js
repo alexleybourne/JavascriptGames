@@ -23,6 +23,8 @@ const RandomColour = async () => {
             day.classList.replace("darker-green", "darkest-green")
         }
 
+        document.getElementById("commit-number").textContent = i
+
         await sleep(1)
 
         i ++ 

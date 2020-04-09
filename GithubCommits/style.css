@@ -20,6 +20,13 @@ body {
     border-radius: 10px;
 }
 
+.contributions {
+    position: absolute;
+    margin-left: 15px;
+    color: white;
+    transform: translateY(-44px);
+}
+
 .days {
     color: #7d7d7d;
     font-size: 10px;
