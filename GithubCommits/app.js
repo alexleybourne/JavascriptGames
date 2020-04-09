@@ -6,9 +6,9 @@ const Start = () => {
 
 const RandomColour = () => {
     let i = 1
-    while ( i < 50 ) {
-        let x = (Math.round(Math.random() * 52))
-        let y = (Math.round(Math.random() * 7))
+    while ( i < 101 ) {
+        let x = (Math.round(Math.random() * 51) + 1)
+        let y = (Math.round(Math.random() * 6) + 1)
         let day = document.querySelector(`#week${x} #day${y}`)
         
         if (day.classList.contains("blank")) {
