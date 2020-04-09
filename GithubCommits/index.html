@@ -11,18 +11,29 @@
     <link rel="stylesheet" href="style.css"><link>
     <script src="app.js" charset="utf-8"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body onload="Start()">
    <div class="container">
        <div class="card">
-           <div class="days">
-            <p>Mon</p>
-            <p>Wed</p>
-            <p>Fri</p>
-           </div>
-            <div class="squares" id="squareArea">
+            <div class="days">
+                <p>Mon</p>
+                <p>Wed</p>
+                <p>Fri</p>
+            </div >
+                <div class="square-space">
+                <div class="squares" id="squareArea">
+                </div>
+                <div class="less-more">
+                    <p>Less</p>
+                    <div class="square blank"></div>
+                    <div class="square green"></div>
+                    <div class="square dark-green"></div>
+                    <div class="square darker-green"></div>
+                    <div class="square darkest-green"></div>
+                    <p>More</p>
+                </div>
             </div>
+            
        </div>
        <button onclick="RandomColour()" class="myButton">Test</button>
    </div>
