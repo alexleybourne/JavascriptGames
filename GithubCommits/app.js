@@ -4,11 +4,11 @@ const Start = () => {
     CreateSquares()
 }
 
-const sleep = (time) => new Promise(r => setTimeout(() => r(), time))
+const sleep = (time) => new Promise(r => setTimeout(r, time))
 
 const RandomColour = async () => {
     let i = 1
-    while ( i < 101 ) {
+    while ( i < 366 ) {
 
         let x = (Math.round(Math.random() * 51) + 1)
         let y = (Math.round(Math.random() * 6) + 1)
@@ -23,7 +23,7 @@ const RandomColour = async () => {
             day.classList.replace("darker-green", "darkest-green")
         }
 
-        await sleep(5)
+        await sleep(1)
 
         i ++ 
     }
