@@ -16,6 +16,7 @@ body {
     width: 928px;
     height: 174px;
     background: white;
+    border-radius: 10px;
 }
 
 .squares {
@@ -37,5 +38,42 @@ body {
 }
 
 .green {
-    background-color: greenyellow;
+    background-color: #c6e48b;
+}
+
+.dark-green {
+    background-color: #7bc96f;
+}
+
+.darker-green {
+    background-color: #239a3b;
+}
+
+.darkest-green {
+    background-color: #196127;
+}
+
+/* Tester Button Pretty Up */
+
+.myButton {
+    margin-top: 10px;
+    outline: none;
+	background-color:#5cbf2a;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:11px 42px;
+    text-decoration:none;
+    border: none;
+    transition-duration: 0.4s;
+}
+
+.myButton:active {
+	position:relative;
+    top:2px;
+    transition-duration: 0.4s;
 }

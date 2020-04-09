@@ -5,11 +5,22 @@ const Start = () => {
 }
 
 const RandomColour = () => {
-    x = (Math.round(Math.random() * 52))
-    y = (Math.round(Math.random() * 7))
-    let day = document.querySelector(`#week${x} #day${y}`)
-    day.removeAttribute('class', `blank`)
-    day.setAttribute('class', `green square`)
+    let i = 1
+    while ( i < 100 ) {
+        x = (Math.round(Math.random() * 52))
+        y = (Math.round(Math.random() * 7))
+        let day = document.querySelector(`#week${x} #day${y}`)
+        if (day.classList.contains('blank')) {
+            day.removeAttribute('class', `blank`)
+            day.setAttribute('class', `green square`)
+        } else if (day.classList.contains('green')) {
+            day.setAttribute('class', `dark-green square`)
+        }
+        
+        
+        console.log(i)
+        i ++
+    }
 }
 
 const CreateSquares = () => {
