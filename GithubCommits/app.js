@@ -4,13 +4,15 @@ const Start = () => {
     CreateSquares()
 }
 
-const RandomColour = () => {
+const sleep = (time) => new Promise(r => setTimeout(() => r(), time))
+
+const RandomColour = async () => {
     let i = 1
     while ( i < 101 ) {
+
         let x = (Math.round(Math.random() * 51) + 1)
         let y = (Math.round(Math.random() * 6) + 1)
         let day = document.querySelector(`#week${x} #day${y}`)
-        
         if (day.classList.contains("blank")) {
             day.classList.replace("blank", "green")
         } else if (day.classList.contains("green")) {
@@ -21,8 +23,9 @@ const RandomColour = () => {
             day.classList.replace("darker-green", "darkest-green")
         }
 
-        console.log(i)
-        i ++
+        await sleep(5)
+
+        i ++ 
     }
 }
 
