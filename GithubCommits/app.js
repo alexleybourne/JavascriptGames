@@ -4,12 +4,16 @@ const Start = () => {
     CreateSquares()
 }
 
+const Reset = () => {
+    location.reload()
+}
+
 const sleep = (time) => new Promise(r => setTimeout(r, time))
 
 let totalCommits = 0
 
 const RandomColour = async () => {
-    let i = 1
+    let i = 0
     while ( i < 366 ) {
 
         let x = (Math.round(Math.random() * 51) + 1)

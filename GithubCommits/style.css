@@ -92,6 +92,10 @@ body {
     background-color: #196127;
 }
 
+.grey {
+    background-color: grey;
+}
+
 .less-more {
     position: relative;
     display: flex;
@@ -112,7 +116,6 @@ body {
 .myButton {
     margin-top: 10px;
     outline: none;
-	background-color:#5cbf2a;
 	border-radius:8px;
 	display:inline-block;
 	cursor:pointer;
