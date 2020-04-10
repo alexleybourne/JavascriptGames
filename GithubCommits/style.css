@@ -27,6 +27,18 @@ body {
     transform: translateY(-44px);
 }
 
+.months {
+    display: flex;
+    color: #7d7d7d;
+    font-size: 10px;
+    position: absolute;
+    transform: translateY(10px);
+}
+
+.months p {
+    margin-left: 50.5px;
+}
+
 .days {
     color: #7d7d7d;
     font-size: 10px;
