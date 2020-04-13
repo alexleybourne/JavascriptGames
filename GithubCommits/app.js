@@ -3,6 +3,7 @@ const Start = () => {
     console.log('started')
     CreateSquares()
     getDate()
+    print()
 }
 
 // Resets by refresh
@@ -22,7 +23,7 @@ const RandomColour = async () => {
 
         let x = (Math.round(Math.random() * 51) + 1)
         let y = (Math.round(Math.random() * 6) + 1)
-        let day = document.querySelector(`1week${x} 1day${y}`)
+        let day = document.querySelector(`#week${x} #day${y}`)
         if (day.classList.contains("blank")) {
             day.classList.replace("blank", "green")
         } else if (day.classList.contains("green")) {
@@ -87,58 +88,58 @@ const CreateSquares = () => {
     }
 }
 
-let message = [
-    
-    1 = '-█-█-',
-    2 = '-█-█-',
-    3 = '-███-',
-    4 = '-█-█-',
-    5 = '-█-█-',
-]
 
-// Characters (grid is 7 x 52)
-let characters = {
+// Characters (grid is 7 x 52) but use (5 x 52)
+let characters = [
     $ = [
-        1 = '-',
-        2 = '-',
-        3 = '-',
-        4 = '-',
-        5 = '-',
+        '-',
+        '-',
+        '-',
+        '-',
+        '-',
     ],
     H = [
-        1 = '█-█',
-        2 = '█-█',
-        3 = '███',
-        4 = '█-█',
-        5 = '█-█',
+        '█-█',
+        '█-█',
+        '███',
+        '█-█',
+        '█-█',
     ],
     I = [
-        1 = '█',
-        2 = '█',
-        3 = '█',
-        4 = '█',
-        5 = '█',
+        '█',
+        '█',
+        '█',
+        '█',
+        '█',
     ],
     R = [
-        1 = '███',
-        2 = '█-█',
-        3 = '██-',
-        4 = '█-█',
-        5 = '█-█',
+        '███',
+        '█-█',
+        '██-',
+        '█-█',
+        '█-█',
     ],
     E = [
-        1 = '███',
-        2 = '█--',
-        3 = '███',
-        4 = '█--',
-        5 = '███',
+        '███',
+        '█--',
+        '███',
+        '█--',
+        '███',
     ],
     M = [
-        1 = '█---█',
-        2 = '██-██',
-        3 = '█-█-█',
-        4 = '█---█',
-        5 = '█---█',
+        '█---█',
+        '██-██',
+        '█-█-█',
+        '█---█',
+        '█---█',
     ],
     
+]
+
+// The printed message
+let message =  { characters : H, I, R, E }
+
+// Displays Message
+const print = async () => {
+    console.log(message)
 }
