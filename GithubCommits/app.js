@@ -1,18 +1,21 @@
-
+// Runs on page load
 const Start = () => {
     console.log('started')
     CreateSquares()
     getDate()
 }
 
+// Resets by refresh
 const Reset = () => {
     location.reload()
 }
 
+// Amazing sleep function
 const sleep = (time) => new Promise(r => setTimeout(r, time))
 
 let totalCommits = 0
 
+// Adds the colouring to each square with random values
 const RandomColour = async () => {
     let i = 0
     while ( i < 366 ) {
@@ -40,6 +43,7 @@ const RandomColour = async () => {
     }
 }
 
+// Grabs current month and then updates months along top of commit log
 const getDate = async () => {
     let d = new Date()
     let m = d.getMonth()
@@ -64,6 +68,7 @@ const getDate = async () => {
     }
 }
 
+// Generates all the squares to display
 const CreateSquares = () => {
     let x = 1
     let y = 1
