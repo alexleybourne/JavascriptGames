@@ -22,7 +22,7 @@ const RandomColour = async () => {
 
         let x = (Math.round(Math.random() * 51) + 1)
         let y = (Math.round(Math.random() * 6) + 1)
-        let day = document.querySelector(`#week${x} #day${y}`)
+        let day = document.querySelector(`1week${x} 1day${y}`)
         if (day.classList.contains("blank")) {
             day.classList.replace("blank", "green")
         } else if (day.classList.contains("green")) {
@@ -85,4 +85,72 @@ const CreateSquares = () => {
         area.appendChild(div)
         x ++ 
     }
+}
+
+// Characters (grid is 7 x 52)
+let characters = {
+    $ = [
+        1 = 00000,
+        2 = 00000,
+        3 = 00000,
+        4 = 00000,
+        5 = 00000,
+        6 = 00000,
+        7 = 00000,
+    ],
+    p = [
+        1 = 00000,
+        2 = 01110,
+        3 = 01010,
+        4 = 01110,
+        5 = 01000,
+        6 = 01000,
+        7 = 00000,
+    ],
+    h = [
+        1 = 00000,
+        2 = 01010,
+        3 = 01010,
+        4 = 01110,
+        5 = 01010,
+        6 = 01010,
+        7 = 00000,
+    ],
+    i = [
+        1 = 00000,
+        2 = 01110,
+        3 = 00100,
+        4 = 00100,
+        5 = 00100,
+        6 = 01110,
+        7 = 00000,
+    ],
+    r = [
+        1 = 00000,
+        2 = 01110,
+        3 = 01010,
+        4 = 01100,
+        5 = 01010,
+        6 = 01010,
+        7 = 00000,
+    ],
+    e = [
+        1 = 00000,
+        2 = 01110,
+        3 = 01000,
+        4 = 01100,
+        5 = 01000,
+        6 = 01110,
+        7 = 00000,
+    ],
+    m = [
+        1 = 00000000,
+        2 = 01100110,
+        3 = 01011010,
+        4 = 01000010,
+        5 = 01000010,
+        6 = 01000010,
+        7 = 00000000,
+    ],
+    
 }
