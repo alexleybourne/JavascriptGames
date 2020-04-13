@@ -45,12 +45,19 @@ const getDate = async () => {
     let m = d.getMonth()
     let months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ]
 
+    document.getElementById('m').innerHTML = months[m]
+
     let i = 0
     while (i < 12) {
 
         let thisMonth = m + i
         if (thisMonth > 11) { thisMonth = thisMonth - 12}
+        console.log(thisMonth)
         console.log(months[thisMonth])
+
+        let label = document.getElementById(`m${i + 1}`)
+        label.innerHTML = (months[thisMonth])
+
         await sleep(1)
 
         i ++ 
