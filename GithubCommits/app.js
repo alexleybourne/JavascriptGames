@@ -40,11 +40,21 @@ const RandomColour = async () => {
     }
 }
 
-const getDate = () => {
+const getDate = async () => {
     let d = new Date()
     let m = d.getMonth()
     let months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ]
-    console.log(months[m])
+
+    let i = 0
+    while (i < 12) {
+
+        let thisMonth = m + i
+        if (thisMonth > 11) { thisMonth = thisMonth - 12}
+        console.log(months[thisMonth])
+        await sleep(1)
+
+        i ++ 
+    }
 }
 
 const CreateSquares = () => {
