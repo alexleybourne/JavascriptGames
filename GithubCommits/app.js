@@ -56,9 +56,6 @@ const getDate = async () => {
 
         let thisMonth = m + i
         if (thisMonth > 11) { thisMonth = thisMonth - 12}
-        console.log(thisMonth)
-        console.log(months[thisMonth])
-
         let label = document.getElementById(`m${i + 1}`)
         label.innerHTML = (months[thisMonth])
 
