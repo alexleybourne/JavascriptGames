@@ -87,6 +87,15 @@ const CreateSquares = () => {
     }
 }
 
+let message = [
+    
+    1 = '-█-█-',
+    2 = '-█-█-',
+    3 = '-███-',
+    4 = '-█-█-',
+    5 = '-█-█-',
+]
+
 // Characters (grid is 7 x 52)
 let characters = {
     $ = [
