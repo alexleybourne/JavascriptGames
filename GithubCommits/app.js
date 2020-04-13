@@ -2,6 +2,7 @@
 const Start = () => {
     console.log('started')
     CreateSquares()
+    getDate()
 }
 
 const Reset = () => {
@@ -37,6 +38,13 @@ const RandomColour = async () => {
         totalCommits ++
         i ++ 
     }
+}
+
+const getDate = () => {
+    let d = new Date()
+    let m = d.getMonth()
+    let months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ]
+    console.log(months[m])
 }
 
 const CreateSquares = () => {
