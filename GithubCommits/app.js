@@ -329,7 +329,7 @@ let characters = [
         '--█',
         '--█',
     ],
-    9 = [
+    0 = [
         '███',
         '█-█',
         '█-█',
@@ -339,9 +339,9 @@ let characters = [
 ]
 
 // The printed message
-let message =  { characters : H, I, R, E }
+let message =  { characters : H, I, R, E, $, M, E }
 
 // Displays Message
-const print = async () => {
+const print = () => {
     console.log(message)
 }
